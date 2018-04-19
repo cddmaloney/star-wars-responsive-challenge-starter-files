@@ -1,0 +1,62 @@
+
+* {
+	box-sizing: border-box;
+}
+
+/* Grid system measurements:
+
+	960px wide	12 columns;
+
+	When the screen width is less than 640px, 
+	columns should take up 100% of their parent container's width, 
+	but there should continue to be padding between the card and the edge of the viewport.
+
+	When the screen is wider than 1000px, the grid should stop expanding, 
+	and it should be centered in the browser window.
+
+	*/
+img {
+	max-width: 100%;
+	}
+
+	.row {
+		max-width: 1000px;
+		padding-left: 20px;
+		padding-right: 20px;
+		margin: 0 auto;
+	}
+
+	/* Clearfix */
+	.row::before,
+	.row::after {
+		display: table;
+		content: '';
+	}
+
+	.row::after {
+		clear: both;
+	}
+
+	.row-1, .row-2 {
+		float: left;
+		/* Gutters:
+   		* Each column is padded by half-a-gutter on each side,
+  		*
+   		* Half a gutter is 10px, 10/960 (context) = 1.041666%
+   		*
+   		*/
+   		padding-left: 1.041666%;
+   		padding-right: 1.041666%;
+  	}
+
+	/* Mobile defaults */
+	.row-1, .row-2 {
+		width: 100%;
+	}
+
+	/* Non-mobile, grid */
+	@media only screen and (min-width: 640px) {
+		.row-1, .row-2 {
+			width: 25%;
+		}
+	}

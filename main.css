@@ -1,0 +1,35 @@
+main {
+	padding-top: 100px;
+}
+
+header h1 {
+	line-height: 1;
+	margin-bottom: 0;
+}
+
+header h2 {
+	margin-top: 0.5em;
+}
+
+nav {
+	background-color: red;
+	padding: 10px;
+}
+
+
+.box {
+	height: 110px;
+	text-align: left;
+}
+
+.row-1, .row-2 {
+	border: 1px solid lightgrey;
+	margin: 10px;
+}
+
+.box-image {
+	width: 100%;
+}
+
+
+
